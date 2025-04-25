@@ -1,0 +1,393 @@
+/* ——— Variables & Reset ——— */
+:root {
+    --bg: #fafafa;
+    --fg: #333;
+    --accent: #4da6ff;
+    --accent-hover: #1a8cff;
+    --transition: .3s ease;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--fg);
+    scroll-behavior: smooth;
+  }
+  body.dark {
+    --bg: #1a1a1a;
+    --fg: #eee;
+  }
+  
+  /* ——— Navbar ——— */
+  .navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: var(--bg);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+  .logo {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+  }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  .nav-menu.show {
+    display: flex;
+  }
+  .nav-menu a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--accent);
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--fg);
+    font-weight: 500;
+    transition:
+      background-color var(--transition),
+      color var(--transition),
+      transform 0.2s ease;
+  }
+  .nav-menu a:hover {
+    background-color: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  
+  /* ——— Theme Toggle Button ——— */
+  .theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform var(--transition);
+  }
+  .theme-btn:hover {
+    transform: rotate(20deg);
+  }
+  
+  /* ——— Hamburger at Mobile ——— */
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: block;
+    }
+    .nav-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: var(--bg);
+      flex-direction: column;
+      padding: 1rem;
+      gap: 0.5rem;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .nav-menu.show {
+      display: flex;
+    }
+  }
+  
+  /* ——— Hero Section ——— */
+  .hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at top left, var(--accent)22, transparent);
+    padding: 2rem;
+  }
+  .hero h1 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    opacity: 0.8;
+  }
+  
+/* ——— Projects (Tek Kolon & Ortalanmış) ——— */
+.projects {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.projects h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.projects h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 0.5rem auto 2rem;
+  border-radius: 2px;
+}
+
+.project {
+  margin-bottom: 2.5rem;
+  text-align: justify;
+  animation: fadeIn 0.8s ease both;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--fg);
+}
+
+.project p {
+  font-size: 1.125rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+body.dark .project p {
+  color: #aaa;
+}
+
+.project .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  transition: background-color var(--transition), color var(--transition), transform 0.2s ease;
+}
+
+.project .btn:hover {
+  background-color: var(--accent-hover);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+  
+  /* ——— About Section ——— */
+.about {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in;
+}
+
+.about h2 {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.about h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.about p {
+  line-height: 1.75;
+  font-size: 1.125rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  text-indent: 1rem;
+}
+
+/* Küçük ekranlarda biraz nefes alalım */
+@media (max-width: 600px) {
+  .about {
+    padding: 2rem 1rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+/* Fade-in animasyonu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  
+ /* ——— Contact Section ——— */
+ .contact {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.contact h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent);
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+.contact-form .btn {
+  padding: 0.75rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: var(--accent-hover);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+/* Çoklu dil */ 
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform var(--transition);
+  margin-left: 0.5rem;
+}
+
+.lang-btn:hover {
+  transform: rotate(10deg);
+}
+
+
+/* Proje ikonları */ 
+
+.project {
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.project-buttons {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  transition: background-color var(--transition), color var(--transition), transform 0.2s ease;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;     
+  font-size: 0.9rem;           
+  font-weight: 600;
+  border: 2px solid currentColor;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  height: auto;                 
+  line-height: 1;               
+  box-sizing: border-box;
+}
+
+
+/* Dil özel renkleri */
+.badge.js {
+  color: #f0db4f;
+  background-color: rgba(240, 219, 79, 0.1);
+}
+
+.badge.html {
+  color: #e44d26;
+  background-color: rgba(228, 77, 38, 0.1);
+}
+
+.badge.css {
+  color: #2965f1;
+  background-color: rgba(41, 101, 241, 0.1);
+}
+
+.badge:hover {
+  background-color: var(--accent-hover);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+

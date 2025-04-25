@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projeler</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">İbrahim.</div>
+    <button class="nav-toggle" aria-label="Menüyü aç/kapa">☰</button>
+    <ul class="nav-menu">
+      <li><a href="index.html" data-i18n="home">Anasayfa</a></li>
+      <li><a href="projects.html" data-i18n="projects">Projeler</a></li>
+      <li><a href="about.html" data-i18n="about">Hakkımda</a></li>
+      <li><a href="contact.html" data-i18n="contact">İletişim</a></li>
+    </ul>
+
+    <!-- Yeni: Buton grubunu div içinde grupla -->
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-btn" aria-label="Tema değiştir">🌓</button>
+      <button id="lang-toggle" class="lang-btn" aria-label="Dil değiştir">🌐</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="projects" class="projects">
+      <h2 data-i18n="projectsTitle">Projelerim</h2>
+
+      <div class="project">
+        <h3 data-i18n="project1Title">Yapılacaklar Listesi</h3>
+        <p data-i18n="project1Desc">Yapılacaklar listesi oluşturmak için yapılan bir uygulama.</p>
+
+        <div class="project-buttons">
+          <a href="https://github.com/ibrahimdvn/MyToDo" class="btn">GitHub</a>
+          <span class="badge js">JavaScript</span>
+          <span class="badge html">HTML</span>
+          <span class="badge css">CSS</span>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3 data-i18n="project2Title">Hesap Makinesi</h3>
+        <p data-i18n="project2Desc">Basit işlemler yapmak için kullanılan bir hesap makinesi uygulaması.</p>
+
+        <div class="project-buttons">
+          <a href="https://github.com/ibrahimdvn/Hesap-Makinesi" class="btn">GitHub</a>
+          <span class="badge js">JavaScript</span>
+          <span class="badge html">HTML</span>
+          <span class="badge css">CSS</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

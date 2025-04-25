@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Anasayfa</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">İbrahim.</div>
+    <button class="nav-toggle" aria-label="Menüyü aç/kapa">☰</button>
+    <ul class="nav-menu">
+      <li><a href="index.html" data-i18n="home">Anasayfa</a></li>
+      <li><a href="projects.html" data-i18n="projects">Projeler</a></li>
+      <li><a href="about.html" data-i18n="about">Hakkımda</a></li>
+      <li><a href="contact.html" data-i18n="contact">İletişim</a></li>
+    </ul>
+    
+  <!-- Yeni: Buton grubunu div içinde grupla -->
+  <div class="nav-actions">
+    <button id="theme-toggle" class="theme-btn" aria-label="Tema değiştir">🌓</button>
+    <button id="lang-toggle" class="lang-btn" aria-label="Dil değiştir">🌐</button>
+  </div>
+  </nav>
+
+  <header id="hero" class="hero">
+  <h1 data-i18n="heroTitle">Merhaba, ben İbrahim.</h1>
+  <p data-i18n="heroDesc">Kod ile hayat bulan dijital gezgin.</p>
+  </header>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

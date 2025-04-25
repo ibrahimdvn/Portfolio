@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İletişim</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="logo">İbrahim.</div>
+    <button class="nav-toggle">☰</button>
+    <ul class="nav-menu">
+      <li><a href="index.html" data-i18n="home">Anasayfa</a></li>
+      <li><a href="projects.html" data-i18n="projects">Projeler</a></li>
+      <li><a href="about.html" data-i18n="about">Hakkımda</a></li>
+      <li><a href="contact.html" data-i18n="contact">İletişim</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-btn">🌓</button>
+      <button id="lang-toggle" class="lang-btn">🌐</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="contact">
+      <h2 data-i18n="contactTitle">İletişim</h2>
+
+      <form action="https://formsubmit.co/ibrahimcanduven1@gmail.com" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Adınız" required data-i18n-placeholder="placeholderName">
+        
+        <input type="email" name="email" placeholder="E-posta adresiniz" required data-i18n-placeholder="placeholderEmail">
+        
+        <textarea name="message" rows="5" placeholder="Mesajınız..." required data-i18n-placeholder="placeholderMsg"></textarea>
+        
+        <button type="submit" class="btn" data-i18n="submit">Gönder</button>
+        
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+      </form>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
